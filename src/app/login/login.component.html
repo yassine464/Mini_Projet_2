@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card shadow">
+        <div class="card-header text-center"><h4>Authentification</h4></div>
+        <div class="card-body">
+          @if (erreur == 1) {
+            <div class="alert alert-danger" role="alert">
+              Login ou mot de passe erronés, veuillez réessayer.
+            </div>
+          }
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Login</label>
+              <input type="text" [(ngModel)]="user.username" name="username" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mot de passe</label>
+              <input type="password" [(ngModel)]="user.password" name="password" class="form-control">
+            </div>
+            <button type="submit" (click)="onLoggedin()" class="btn btn-primary">Se connecter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
